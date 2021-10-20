@@ -1,0 +1,2 @@
+sphinx==3.2.1
+sphinxcontrib-bibtex<2.0.0
