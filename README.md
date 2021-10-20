@@ -11,7 +11,7 @@
 Follow these instructions:
 
 ```
-git clone https://gitlab.multiscale.utah.edu/kamila/multipy.git
+git clone https://github.com/kamilazdybal/multipy.git
 cd multipy
 python setup.py install
 ```
