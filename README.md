@@ -2,7 +2,7 @@
 
 ------
 
-## [Web documentation](https://multipy.readthedocs.io/en/latest/index.html)
+## [Web documentation](https://multipy-lib.readthedocs.io/)
 
 ------
 
