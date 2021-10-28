@@ -4,6 +4,13 @@
 
 .. |logoimage| image:: images/multipy-logo-docs-header.svg
 
+.. image:: https://img.shields.io/badge/GitHub-multipy-blue.svg?style=flat
+    :target: https://github.com/kamilazdybal/multipy
+.. image:: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
+    :target: https://github.com/kamilazdybal/multipy
+.. image:: https://readthedocs.org/projects/multipy-lib/badge/?version=latest
+    :target: https://multipy-lib.readthedocs.io/en/latest/?badge=latest
+
 --------------------------------------------------------------------------------
 
 ***********
