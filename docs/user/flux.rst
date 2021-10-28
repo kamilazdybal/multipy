@@ -2,9 +2,6 @@
 Fluxes
 ###################################################
 
-.. contents:: Table of contents
-   :depth: 5
-
 Class ``Flux``
 ==============
 

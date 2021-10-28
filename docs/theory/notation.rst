@@ -2,9 +2,6 @@
 Notation
 ###################################################
 
-.. contents:: Table of contents
-   :depth: 5
-
 This part of the documentation presents notations for all ``multipy`` quantities.
 
 --------------------------------------------------------------------------------

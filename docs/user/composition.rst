@@ -2,9 +2,6 @@
 Composition
 ###################################################
 
-.. contents:: Table of contents
-   :depth: 5
-
 Class ``Composition``
 =====================
 

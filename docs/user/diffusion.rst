@@ -2,9 +2,6 @@
 Diffusion
 ###################################################
 
-.. contents:: Table of contents
-   :depth: 5
-
 Class ``Diffusion``
 =====================
 

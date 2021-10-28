@@ -4,9 +4,6 @@ Derivations
 
 This section documents few less commonly presented derivations.
 
-.. contents:: Table of contents
-   :depth: 5
-
 --------------------------------------------------------------------------------
 
 ********************************************

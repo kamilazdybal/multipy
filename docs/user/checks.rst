@@ -2,9 +2,6 @@
 Basic checks
 ###################################################
 
-.. contents:: Table of contents
-   :depth: 5
-
 Class ``Check``
 ==================
 
