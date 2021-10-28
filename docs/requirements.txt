@@ -1,1 +1,1 @@
-furo
+jupyter-sphinx-theme
