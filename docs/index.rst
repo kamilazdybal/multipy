@@ -80,3 +80,9 @@ Documentation & User Guide
     theory/quantities
     theory/governing-equations
     theory/derivations
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Tutorials
+
+    tutorials/non-reacting-stefan-tube-mole-fractions
