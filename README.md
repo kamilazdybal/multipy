@@ -6,6 +6,12 @@
 
 ------
 
+## Tutorials
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kamilazdybal/multipy/main?labpath=%2Fdocs%2Ftutorials)
+
+------
+
 ## Installation
 
 Follow these instructions:

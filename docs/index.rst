@@ -10,6 +10,8 @@
     :target: https://github.com/kamilazdybal/multipy
 .. image:: https://readthedocs.org/projects/multipy-lib/badge/?version=latest
     :target: https://multipy-lib.readthedocs.io/en/latest/?badge=latest
+.. image:: https://mybinder.org/badge_logo.svg
+    :target: https://mybinder.org/v2/gh/kamilazdybal/multipy/main?labpath=%2Fdocs%2Ftutorials
 
 --------------------------------------------------------------------------------
 
