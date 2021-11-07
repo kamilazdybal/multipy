@@ -6,7 +6,7 @@ In this tutorial, we demonstrate how ``multipy`` functionalities can be used to 
 
 .. note::
 
-  This tutorial has been computed using a Jupyter notebook that can be accessed `here <https://gitlab.multiscale.utah.edu/kamila/multipy/-/blob/master/docs/tutorials/non-reacting-stefan-tube.ipynb>`_.
+  This tutorial has been computed using a Jupyter notebook that can be accessed `here <https://mybinder.org/v2/gh/kamilazdybal/multipy/main?labpath=%2Fdocs%2Ftutorials%2Fnon-reacting-stefan-tube-mole-fractions.ipynb>`_.
 
 ==========
 Highlights
