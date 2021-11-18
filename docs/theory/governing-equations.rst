@@ -101,7 +101,7 @@ Temperature equation
 
 .. math::
 
-  \rho c_p \frac{DT}{D t} = - \nabla \cdot \mathbf{q} + \alpha T \frac{Dp}{Dt} - \pmb{\tau} : \nabla \mathbf{v} + \sum_{i=1}^{n} \big( h_i (\nabla \cdot \mathbf{j}_i - \omega_i) + \mathbf{f}_i \cdot \mathbf{j}_i
+  \rho c_p \frac{DT}{D t} = - \nabla \cdot \mathbf{q} + \alpha T \frac{Dp}{Dt} - \pmb{\tau} : \nabla \mathbf{v} + \sum_{i=1}^{n} \big( h_i (\nabla \cdot \mathbf{j}_i - \omega_i) + \mathbf{f}_i \cdot \mathbf{j}_i \big)
 
 where:
 
@@ -115,11 +115,8 @@ Entropy equation
 
 .. math::
 
-
-
+  \frac{\partial \rho s}{\partial t} = - \nabla \cdot \rho s \mathbf{v} - \nabla \Big( \frac{1}{T} \big( \mathbf{q} - \sum_{i=1}^{n} \tilde{\mu}_i \mathbf{j}_i \big) \Big) + \mathbf{q} \cdot \nabla \Big( \frac{1}{T} \Big) - \sum_{i=1}^{n} \mathbf{j}_i \cdot \nabla \Big( \frac{\tilde{\mu}_i}{T} \Big) - \frac{1}{T} \pmb{\tau} : \nabla \mathbf{v} + \frac{1}{T} \sum_{i=1}^{n} \mathbf{f}_i \cdot \mathbf{j}_i - \frac{1}{T} \sum_{i=1}^{n} \tilde{\mu}_i \omega_i
 
 where:
 
-- :math:``
-- :math:``
-- :math:``
+- :math:`\tilde{\mu}_i` is the chemical potential of species :math:`i`
