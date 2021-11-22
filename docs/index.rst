@@ -29,8 +29,8 @@ with which you can play to get more intuition and understanding of quantities
 involved in multicomponent flows. With a fair amount of linear algebra and matrix operations, we
 paid special attention to document the equations along with the sizes of matrices.
 With these tools you can set-up your
-own problems such as the `Stefan tube <file:///Users/kamilazdybal/GitLab-Multiscale-Utah/multipy/docs/_build/html/tutorials/non-reacting-stefan-tube-mole-fractions.html>`_
-or the `two-bulb diffusion <file:///Users/kamilazdybal/GitLab-Multiscale-Utah/multipy/docs/_build/html/tutorials/two-bulb-diffusion.html>`_
+own problems such as the `Stefan tube <https://multipy-lib.readthedocs.io/en/latest/tutorials/non-reacting-stefan-tube-mole-fractions.html>`_
+or the `two-bulb diffusion <https://multipy-lib.readthedocs.io/en/latest/>`_
 without a whole lot of coding. We wish you a lot of joy in studying multicomponent mass transfer!
 
 --------------------------------------------------------------------------------
