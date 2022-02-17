@@ -21,14 +21,14 @@ gas_constant = 8.31446261815324
 ################################################################################
 ################################################################################
 ####
-####    Class: MulticomponentEffects
+####    Class: Templates
 ####
 ################################################################################
 ################################################################################
 
-class MulticomponentEffects:
+class Templates:
     """
-    Supports performing checks of the multicomponent effects.
+    Contains solution templates for common multicomponent mass trasfer problems.
     """
 
     # --------------------------------------------------------------------------

@@ -73,6 +73,7 @@ Documentation & User Guide
     user/diffusion
     user/transform
     user/checks
+    user/templates
 
 .. toctree::
     :maxdepth: 1

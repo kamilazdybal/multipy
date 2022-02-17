@@ -1,7 +1,7 @@
 """multipy: Python library for multicomponent mass transfer"""
 
 __author__ = "James C. Sutherland, Kamila Zdybal"
-__copyright__ = "Copyright (c) 2021, James C. Sutherland, Kamila Zdybal"
+__copyright__ = "Copyright (c) 2022, James C. Sutherland, Kamila Zdybal"
 __license__ = "MIT"
 __version__ = "1.0.0"
 __maintainer__ = ["Kamila Zdybal"]
@@ -454,7 +454,7 @@ class Composition:
 
         if p < 0:
             raise ValueError("Parameter `p` cannot be negative.")
-            
+
         mixture_molar_density = p/(gas_constant*T)
 
         return mixture_molar_density
