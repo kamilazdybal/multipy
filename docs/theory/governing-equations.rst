@@ -12,13 +12,23 @@ Let :math:`\mathbf{v}` be the mass-averaged velocity of the mixture, defined as:
 
 .. math::
 
-  \mathbf{v} = \sum_{i = 1}^{n} Y_i \mathbf{u}_i
+  \mathbf{v} := \sum_{i = 1}^{n} Y_i \mathbf{u}_i
 
 where:
 
 - :math:`Y_i` is the mass fraction of species :math:`i`
 - :math:`\mathbf{u}_i` is the velocity of species :math:`i`
 - :math:`n` is the number of species (components) in the mixture.
+
+In an analogous way, we can define the molar-averaged velocity of the mixture, :math:`\mathbf{u}`, as:
+
+.. math::
+
+  \mathbf{u} := \sum_{i = 1}^{n} X_i \mathbf{u}_i
+
+where:
+
+- :math:`X_i` is the mole fraction of species :math:`i`
 
 At a given point in space and time, transport of physical quantities in a
 multicomponent mixture can be described by the following set of governing
@@ -33,7 +43,7 @@ Continuity equation
 
 where:
 
-- :math:`\rho` is the mixture density
+- :math:`\rho` is the mixture mass density
 
 Species mass conservation equation
 =====================================
@@ -46,6 +56,19 @@ where:
 
 - :math:`\mathbf{j}_i` is the mass diffusive flux of species :math:`i` relative to a mass-averaged velocity
 - :math:`\omega_i` is the net mass production rate of species :math:`i`
+
+Species moles conservation equation
+=====================================
+
+.. math::
+
+  \frac{\partial c X_i}{\partial t} = - \nabla \cdot c X_i \mathbf{u} - \nabla \cdot \mathbf{J}_i + s_i
+
+where:
+
+- :math:`c` is the mixture molar density
+- :math:`\mathbf{J}_i` is the molar diffusive flux of species :math:`i` relative to a molar-averaged velocity
+- :math:`s_i` is the net molar production rate of species :math:`i`
 
 Momentum equation
 =====================================
