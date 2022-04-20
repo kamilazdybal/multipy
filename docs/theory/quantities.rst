@@ -448,7 +448,7 @@ Mass diffusive flux relative to a molar-averaged velocity
 +------------------------+------------------------+------------------------------------------+----------------------------+---------------------------------+
 | Notation               | Unit                   | Code                                     | Type                       | Shape                           |
 +========================+========================+==========================================+============================+=================================+
-| :math:`\mathbf{j}_i^u` | :math:`[mole/(m^2 s)]` | ``Flux.diffusive_mass_molar``            | vector ``numpy.ndarray``   | ``(n_species,n_observations)``  |
+| :math:`\mathbf{j}_i^u` | :math:`[kg/(m^2 s)]`   | ``Flux.diffusive_mass_molar``            | vector ``numpy.ndarray``   | ``(n_species,n_observations)``  |
 +------------------------+------------------------+------------------------------------------+----------------------------+---------------------------------+
 
 .. math::
@@ -467,9 +467,9 @@ Mass diffusive flux relative to a mass-averaged velocity
 +------------------------+------------------------+------------------------------------------+----------------------------+---------------------------------+
 | Notation               | Unit                   | Code                                     | Type                       | Shape                           |
 +========================+========================+==========================================+============================+=================================+
-| :math:`\mathbf{j}_i`   | :math:`[mole/(m^2 s)]` | ``Flux.diffusive_mass_mass``             | vector ``numpy.ndarray``   | ``(n_species,n_observations)``  |
+| :math:`\mathbf{j}_i`   | :math:`[kg/(m^2 s)]`   | ``Flux.diffusive_mass_mass``             | vector ``numpy.ndarray``   | ``(n_species,n_observations)``  |
 +------------------------+------------------------+------------------------------------------+----------------------------+---------------------------------+
-| :math:`\mathbf{j}_i`   | :math:`[mole/(m^2 s)]` | ``Diffusion.diffusive_flux_mass_mass``   | vector ``numpy.ndarray``   | ``(n_species,n_observations)``  |
+| :math:`\mathbf{j}_i`   | :math:`[kg/(m^2 s)]`   | ``Diffusion.diffusive_flux_mass_mass``   | vector ``numpy.ndarray``   | ``(n_species,n_observations)``  |
 +------------------------+------------------------+------------------------------------------+----------------------------+---------------------------------+
 
 .. math::
