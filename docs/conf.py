@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.abspath('../multipy/'))
 # -- Project information -----------------------------------------------------
 
 project = 'multipy'
-copyright = '2021, James C. Sutherland, Kamila Zdybał'
+copyright = '2021-2022, James C. Sutherland, Kamila Zdybał'
 author = 'James C. Sutherland, Kamila Zdybał'
 release = '1.0.0'
 

@@ -39,7 +39,8 @@ without a whole lot of coding. We wish you a lot of joy in studying multicompone
 Credits
 ***********
 
-Many materials helped in creating this library:
+Many materials helped in creating this library and we list them below.
+These are also great references to support your learning and broaden your knowledge!
 
 - ``[1]`` J. C. Sutherland - *Multicomponent mass transfer* course, `CHEN-6603 <https://sutherland.che.utah.edu/teaching/chen6603/>`_, The University of Utah, 2012
 - ``[2]`` R. Taylor, R. Krishna - *Multicomponent mass transfer*, Wiley, 1993
@@ -54,8 +55,6 @@ Many materials helped in creating this library:
 - ``[11]`` M. A. Hansen, J. C. Sutherland - *On the consistency of state vectors and Jacobian matrices*, Combustion and Flame 193 (2018) 257-271
 - ``[12]`` J. C. Sutherland, P. J. Smith, J. H. Chen - *Quantification of differential diffusion in nonpremixed systems*, Combustion Theory and Modelling 9(2) (2005) 365-383
 - ``[13]`` G. Sanderson - `The diffusion equation <https://youtu.be/a3V0BJLIo_c>`_
-
-All of the above are also great references to support your learning and broaden your knowledge!
 
 --------------------------------------------------------------------------------
 
