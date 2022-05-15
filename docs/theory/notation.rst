@@ -19,7 +19,7 @@ Indexing
 Bases and reference frames
 **************************************
 
-Multicomponent quantities can often be written in various bases (e.g. mass or molar)
+Multicomponent quantities can be written in various bases (e.g. mass or molar)
 and in reference to different average velocity of the mixture (e.g. mass-averaged or molar-averged).
 To keep track of a basis and a reference frame related to mixture velocity, we adopted the following
 notation in naming functions or parameters:
