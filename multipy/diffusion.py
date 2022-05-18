@@ -15,7 +15,6 @@ import copy
 import scipy
 import multipy
 import warnings
-# from IPython.display import display
 
 gas_constant = 8.31446261815324
 
@@ -221,6 +220,8 @@ class Diffusion:
             raise ValueError("Parameter `float_format` has to be of type `str`.")
 
         if table_format == 'pandas':
+
+            from IPython.display import display
 
             pandas_format = '{:,' + float_format + '}'
 
