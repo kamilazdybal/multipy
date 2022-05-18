@@ -15,7 +15,7 @@ import copy
 import scipy
 import multipy
 import warnings
-from IPython.display import display
+# from IPython.display import display
 
 gas_constant = 8.31446261815324
 
@@ -34,8 +34,7 @@ class Diffusion:
     :param binary_diffusion_coefficients:
         scalar ``numpy.ndarray`` specifying the binary diffusion coefficients, :math:`\\pmb{\\mathcal{D}}`, in :math:`[m^2/s]` for **all** species. It should be a symmetric matrix of size ``(n_species,n_species)``.
     :param species_names: (optional)
-        ``list`` of ``str`` specifying the names for **all** species. It should match the number and ordering of species as per the ``binary_diffusion_coefficients`` parameter.
-        If not specified, species will be tagged with consecutive integers, i.e. ``'1'``, ``'2'`` and so on.
+        ``list`` of ``str`` specifying the names for **all** species. It should match the number and ordering of species as per the ``binary_diffusion_coefficients`` parameter. If not specified, species will be tagged with consecutive integers, i.e. ``'1'``, ``'2'`` and so on.
 
     **Getters:**
 

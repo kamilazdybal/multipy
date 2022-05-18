@@ -3,5 +3,3 @@ numpy
 scipy
 plotly
 pandas
-Ipython
-IPython.display
