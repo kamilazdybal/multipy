@@ -15,6 +15,7 @@ import copy
 import scipy
 import multipy
 import warnings
+from IPython.display import display
 
 gas_constant = 8.31446261815324
 
@@ -32,10 +33,12 @@ class Diffusion:
 
     :param binary_diffusion_coefficients:
         scalar ``numpy.ndarray`` specifying the binary diffusion coefficients, :math:`\\pmb{\\mathcal{D}}`, in :math:`[m^2/s]` for **all** species. It should be a symmetric matrix of size ``(n_species,n_species)``.
-
+    :param species_names: (optional)
+        ``list`` of ``str`` specifying the names for **all** species. It should match the number and ordering of species as per the ``binary_diffusion_coefficients`` parameter.
+        If not specified, species will be tagged with consecutive integers, i.e. ``'1'``, ``'2'``, ...
     **Getters:**
 
-    - **get_binary_diffusion_coefficients** (is set to ``None`` at class init)
+    - **get_binary_diffusion_coefficients** (is set at class init)
     - **get_n_species** read only - (is set to ``0`` at class init)
     - **get_fickian_diffusion_coefficients_molar_molar** (is set to ``None`` at class init)
     - **get_fickian_diffusion_coefficients_mass_mass** (is set to ``None`` at class init)
@@ -51,29 +54,37 @@ class Diffusion:
 
     # --------------------------------------------------------------------------
 
-    def __init__(self, binary_diffusion_coefficients=None):
+    def __init__(self, binary_diffusion_coefficients, species_names=None):
 
-        if binary_diffusion_coefficients is not None:
-            if not isinstance(binary_diffusion_coefficients, np.ndarray):
-                raise ValueError("Parameter `binary_diffusion_coefficients` has to be of type `numpy.ndarray`.")
+        if not isinstance(binary_diffusion_coefficients, np.ndarray):
+            raise ValueError("Parameter `binary_diffusion_coefficients` has to be of type `numpy.ndarray`.")
 
-            try:
-                (n_coefficients_1, n_coefficients_2) = np.shape(binary_diffusion_coefficients)
-            except:
-                raise ValueError("Parameter `binary_diffusion_coefficients` has to be a matrix.")
+        try:
+            (n_coefficients_1, n_coefficients_2) = np.shape(binary_diffusion_coefficients)
+        except:
+            raise ValueError("Parameter `binary_diffusion_coefficients` has to be a matrix.")
 
-            if n_coefficients_1 != n_coefficients_2:
-                raise ValueError("Parameter `binary_diffusion_coefficients` has to be a square matrix.")
+        if n_coefficients_1 != n_coefficients_2:
+            raise ValueError("Parameter `binary_diffusion_coefficients` has to be a square matrix.")
 
-            if not np.allclose(binary_diffusion_coefficients, binary_diffusion_coefficients.T, rtol=1e-08, atol=1e-08):
-                raise ValueError("Parameter `binary_diffusion_coefficients` has to be a symmetric matrix.")
+        if not np.allclose(binary_diffusion_coefficients, binary_diffusion_coefficients.T, rtol=1e-08, atol=1e-08):
+            raise ValueError("Parameter `binary_diffusion_coefficients` has to be a symmetric matrix.")
 
-            self.__n_species = n_coefficients_1
+        if species_names is not None:
+
+            if not isinstance(species_names, list):
+                raise ValueError("Parameter `species_names` has to be of type `list`.")
+
+            if len(species_names) != n_coefficients_1:
+                raise ValueError("Parameter `species_names` has to have length equal to the number of species.")
 
         else:
-            self.__n_species = 0
 
+            species_names = [str(i+1) for i in range(0,n_coefficients_1)]
+
+        self.__n_species = n_coefficients_1
         self.__binary_diffusion_coefficients = binary_diffusion_coefficients
+        self.__species_names = species_names
         self.__fickian_diffusion_coefficients_molar_molar = None
         self.__fickian_diffusion_coefficients_mass_mass = None
         self.__fickian_diffusion_coefficients_molar_volume = None
@@ -85,6 +96,10 @@ class Diffusion:
     @property
     def get_n_species(self):
         return self.__n_species
+
+    @property
+    def get_species_names(self):
+        return self.__species_names
 
     @property
     def get_fickian_diffusion_coefficients_molar_molar(self):
@@ -119,6 +134,17 @@ class Diffusion:
             self.__n_species = n_coefficients_1
 
         self.__binary_diffusion_coefficients = new_binary_diffusion_coefficients
+
+    @get_species_names.setter
+    def set_species_names(self, new_species_names):
+
+        if not isinstance(new_species_names, list):
+            raise ValueError("Parameter `species_names` has to be of type `list`.")
+
+        if len(new_species_names) != self.__n_species:
+            raise ValueError("Parameter `species_names` has to have length equal to the number of species.")
+
+        self.__species_names = new_species_names
 
     @get_fickian_diffusion_coefficients_molar_molar.setter
     def set_fickian_diffusion_coefficients_molar_molar(self, new_fickian_diffusion_coefficients):
@@ -170,6 +196,55 @@ class Diffusion:
             raise ValueError("Parameter `fickian_diffusion_coefficients_molar_volumer` has to be a square matrix.")
 
         self.__fickian_diffusion_coefficients_molar_volume = new_fickian_diffusion_coefficients
+
+    # --------------------------------------------------------------------------
+
+    def print_binary_diffusion_coefficients(self, table_format='pandas', float_format='.8f'):
+        """
+        Prints the binary diffusion coefficients matrix, :math:`\\pmb{\\mathcal{D}}`.
+
+        :param table_format: (optional)
+            ``str`` specifying the printing format. It can be ``'pandas'`` or ``'raw'``.
+        :param float_format: (optional)
+            ``str`` specifying the float formatting when printing the table.
+        """
+
+        __formats = ['pandas', 'raw']
+
+        if not isinstance(table_format, str):
+            raise ValueError("Parameter `table_format` has to be of type `str`.")
+
+        if table_format not in __formats:
+            raise ValueError("Parameter `table_format` can only be `pandas` or `raw`.")
+
+        if not isinstance(float_format, str):
+            raise ValueError("Parameter `float_format` has to be of type `str`.")
+
+        if table_format == 'pandas':
+
+            pandas_format = '{:,' + float_format + '}'
+
+            binary_diffusion_coefficients_table = pd.DataFrame(self.get_binary_diffusion_coefficients, columns=self.get_species_names, index=self.get_species_names)
+            formatted_table = binary_diffusion_coefficients_table.style.format(pandas_format)
+            display(formatted_table)
+
+        elif table_format == 'raw':
+
+            print_width = 10
+            rows_names = []
+            row_format = '|'
+
+            for i in range(self.get_n_species + 1):
+                row_format += ' {' + str(i) + ':<' + str(print_width) + '} |'
+            rows_names.insert(0, ' ')
+
+            for species in self.get_species_names:
+                rows_names.append(species)
+
+            print(row_format.format(*rows_names))
+
+            for i, row in zip(self.get_species_names, self.get_binary_diffusion_coefficients):
+                print(row_format.format(i, *row))
 
     # --------------------------------------------------------------------------
 

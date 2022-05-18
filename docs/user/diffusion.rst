@@ -7,6 +7,11 @@ Class ``Diffusion``
 
 .. autoclass:: multipy.diffusion.Diffusion
 
+``Diffusion.print_binary_diffusion_coefficients``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. autofunction:: multipy.diffusion.Diffusion.print_binary_diffusion_coefficients
+
 ``Diffusion.fickian_diffusion_coefficients_molar_molar``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

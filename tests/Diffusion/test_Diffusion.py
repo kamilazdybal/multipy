@@ -14,18 +14,24 @@ class Diffusion(unittest.TestCase):
 
     def test__Diffusion__allowed_calls(self):
 
-        try:
-            check = multipy.Diffusion()
-            self.assertTrue(check.get_n_species==0)
-        except Exception:
-            self.assertTrue(False)
-
         D1 = np.array([[1,2],
                        [2,3]])
+
+        try:
+            check = multipy.Diffusion(D1)
+            self.assertTrue(check.get_n_species==2)
+        except Exception:
+            self.assertTrue(False)
 
         D2 = np.array([[1,20,10],
                        [20,3,5],
                        [10,5,4]])
+
+        try:
+            check = multipy.Diffusion(D2)
+            self.assertTrue(check.get_n_species==3)
+        except Exception:
+            self.assertTrue(False)
 
         try:
             check = multipy.Diffusion(D1)
