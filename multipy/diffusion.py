@@ -202,6 +202,20 @@ class Diffusion:
         """
         Prints the binary diffusion coefficients matrix, :math:`\\pmb{\\mathcal{D}}`.
 
+        If ``table_format`` is set to ``'pandas'``, a table will be printed in the ``pandas.DataFrame`` format:
+
+        .. image:: ../images/print_binary_diffusion_coefficients-pandas.png
+          :width: 400
+
+        If ``table_format`` is set to ``'raw'``, a table will be printed in the raw text format:
+
+        .. code-block:: text
+
+            |            | Acetone    | Methanol   | Air        |
+            | Acetone    | 0.0        | 8.48e-06   | 1.372e-05  |
+            | Methanol   | 8.48e-06   | 0.0        | 1.991e-05  |
+            | Air        | 1.372e-05  | 1.991e-05  | 0.0        |
+
         :param table_format: (optional)
             ``str`` specifying the printing format. It can be ``'pandas'`` or ``'raw'``.
         :param float_format: (optional)
