@@ -36,6 +36,7 @@ class Diffusion:
     :param species_names: (optional)
         ``list`` of ``str`` specifying the names for **all** species. It should match the number and ordering of species as per the ``binary_diffusion_coefficients`` parameter.
         If not specified, species will be tagged with consecutive integers, i.e. ``'1'``, ``'2'``, ...
+
     **Getters:**
 
     - **get_binary_diffusion_coefficients** (is set at class init)
