@@ -174,7 +174,6 @@ where:
 - :math:`\mathbf{j}_i` is the mass diffusive flux of species :math:`i` relative to a mass-averaged velocity
 - :math:`\omega_i` is the net mass production rate of species :math:`i`
 - :math:`\mathbf{f}_i` is the net acceleration from body forces acting on species :math:`i`
-- :math:`\mathbf{j}_i` is the mass diffusive flux of species :math:`i` relative to a mass-averaged velocity
 - :math:`n` is the number of species (components) in the mixture
 
 Entropy equation
