@@ -18,7 +18,7 @@ where:
 
 - :math:`Y_i` is the mass fraction of species :math:`i`
 - :math:`\mathbf{u}_i` is the velocity of species :math:`i`
-- :math:`n` is the number of species (components) in the mixture.
+- :math:`n` is the number of species (components) in the mixture
 
 In an analogous way, we can define the molar-averaged velocity of the mixture, :math:`\mathbf{u}`, as:
 
@@ -29,6 +29,8 @@ In an analogous way, we can define the molar-averaged velocity of the mixture, :
 where:
 
 - :math:`X_i` is the mole fraction of species :math:`i`
+- :math:`\mathbf{u}_i` is the velocity of species :math:`i`
+- :math:`n` is the number of species (components) in the mixture
 
 At a given point in space and time, transport of physical quantities in a
 multicomponent mixture can be described by the following set of governing
@@ -44,6 +46,7 @@ Continuity equation
 where:
 
 - :math:`\rho` is the mixture mass density
+- :math:`\mathbf{v}` is the mass-averaged velocity of the mixture
 
 Species mass conservation equation
 =====================================
@@ -54,6 +57,9 @@ Species mass conservation equation
 
 where:
 
+- :math:`\rho` is the mixture mass density
+- :math:`Y_i` is the mass fraction of species :math:`i`
+- :math:`\mathbf{v}` is the mass-averaged velocity of the mixture
 - :math:`\mathbf{j}_i` is the mass diffusive flux of species :math:`i` relative to a mass-averaged velocity
 - :math:`\omega_i` is the net mass production rate of species :math:`i`
 
@@ -67,6 +73,8 @@ Species moles conservation equation
 where:
 
 - :math:`c` is the mixture molar density
+- :math:`X_i` is the mole fraction of species :math:`i`
+- :math:`\mathbf{u}` is the molar-averaged velocity of the mixture
 - :math:`\mathbf{J}_i` is the molar diffusive flux of species :math:`i` relative to a molar-averaged velocity
 - :math:`s_i` is the net molar production rate of species :math:`i`
 
@@ -79,10 +87,14 @@ Momentum equation
 
 where:
 
+- :math:`\rho` is the mixture mass density
+- :math:`\mathbf{v}` is the mass-averaged velocity of the mixture
 - :math:`\pmb{\tau}` is the viscous momentum flux tensor
 - :math:`p` is the pressure
 - :math:`\mathbf{I}` is the identity matrix
+- :math:`Y_i` is the mass fraction of species :math:`i`
 - :math:`\mathbf{f}_i` is the net acceleration from body forces acting on species :math:`i`
+- :math:`n` is the number of species (components) in the mixture
 
 Total internal energy equation
 =====================================
@@ -93,9 +105,15 @@ Total internal energy equation
 
 where:
 
+- :math:`\rho` is the mixture mass density
 - :math:`e_0` is the mixture total internal energy
+- :math:`\mathbf{v}` is the mass-averaged velocity of the mixture
 - :math:`\mathbf{q}` is the heat flux
+- :math:`\pmb{\tau}` is the viscous momentum flux tensor
+- :math:`p` is the pressure
+- :math:`\mathbf{f}_i` is the net acceleration from body forces acting on species :math:`i`
 - :math:`\mathbf{n}_i` is the total mass flux of species :math:`i`
+- :math:`n` is the number of species (components) in the mixture
 
 Internal energy equation
 =====================================
@@ -106,7 +124,15 @@ Internal energy equation
 
 where:
 
+- :math:`\rho` is the mixture mass density
 - :math:`e` is the mixture internal energy
+- :math:`\mathbf{v}` is the mass-averaged velocity of the mixture
+- :math:`\mathbf{q}` is the heat flux
+- :math:`\pmb{\tau}` is the viscous momentum flux tensor
+- :math:`p` is the pressure
+- :math:`\mathbf{f}_i` is the net acceleration from body forces acting on species :math:`i`
+- :math:`\mathbf{j}_i` is the mass diffusive flux of species :math:`i` relative to a mass-averaged velocity
+- :math:`n` is the number of species (components) in the mixture
 
 Enthalpy equation
 =====================================
@@ -117,7 +143,15 @@ Enthalpy equation
 
 where:
 
+- :math:`\rho` is the mixture mass density
 - :math:`h` is the mixture enthalpy
+- :math:`\mathbf{v}` is the mass-averaged velocity of the mixture
+- :math:`\mathbf{q}` is the heat flux
+- :math:`\pmb{\tau}` is the viscous momentum flux tensor
+- :math:`p` is the pressure
+- :math:`\mathbf{f}_i` is the net acceleration from body forces acting on species :math:`i`
+- :math:`\mathbf{j}_i` is the mass diffusive flux of species :math:`i` relative to a mass-averaged velocity
+- :math:`n` is the number of species (components) in the mixture
 
 Temperature equation
 =====================================
@@ -128,10 +162,20 @@ Temperature equation
 
 where:
 
+- :math:`\rho` is the mixture mass density
 - :math:`c_p` is the mixture isobaric specific heat capacity
 - :math:`T` is the mixture temperature
+- :math:`\mathbf{q}` is the heat flux
 - :math:`\alpha` is the coefficient of thermal expansion
+- :math:`p` is the pressure
+- :math:`\pmb{\tau}` is the viscous momentum flux tensor
+- :math:`\mathbf{v}` is the mass-averaged velocity of the mixture
 - :math:`h_i` is the enthalpy of species :math:`i`
+- :math:`\mathbf{j}_i` is the mass diffusive flux of species :math:`i` relative to a mass-averaged velocity
+- :math:`\omega_i` is the net mass production rate of species :math:`i`
+- :math:`\mathbf{f}_i` is the net acceleration from body forces acting on species :math:`i`
+- :math:`\mathbf{j}_i` is the mass diffusive flux of species :math:`i` relative to a mass-averaged velocity
+- :math:`n` is the number of species (components) in the mixture
 
 Entropy equation
 =====================================
@@ -142,4 +186,12 @@ Entropy equation
 
 where:
 
+- :math:`\rho` is the mixture mass density
+- :math:`s` is the mixture entropy
+- :math:`\mathbf{v}` is the mass-averaged velocity of the mixture
+- :math:`T` is the mixture temperature
+- :math:`\mathbf{q}` is the heat flux
 - :math:`\tilde{\mu}_i` is the chemical potential of species :math:`i`
+- :math:`\mathbf{j}_i` is the mass diffusive flux of species :math:`i` relative to a mass-averaged velocity
+- :math:`\pmb{\tau}` is the viscous momentum flux tensor
+- :math:`n` is the number of species (components) in the mixture
