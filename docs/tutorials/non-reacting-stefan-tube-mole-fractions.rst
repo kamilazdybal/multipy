@@ -143,7 +143,7 @@ Binary diffusivities :math:`\mathcal{D}` in :math:`[m^2/s]`:
     D23 = 19.91 / 1000**2
     D32 = D23
 
-We can now create a diagonal matrix of size ``(3, 3)`` that contains the
+We can now create a symmetric matrix of size ``(3, 3)`` that contains the
 binary diffusivities:
 
 .. code:: python
